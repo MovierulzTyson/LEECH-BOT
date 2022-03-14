@@ -13,7 +13,7 @@ from tobrot import DESTINATION_FOLDER, EDIT_SLEEP_TIME_OUT, LOGGER, RCLONE_CONFI
 
 async def check_size_g(client, message):
     # await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
-    del_it = await message.reply_text("🔊 Checking size...wait!!!")
+    del_it = await message.reply_text("🔊 ᴄʜᴇᴄᴋɪɴɢ sɪᴢᴇ...ᴡᴀɪᴛ!!!")
     if not os.path.exists("rclone.conf"):
         with open("rclone.conf", "w+", newline="\n", encoding="utf-8") as fole:
             fole.write(f"{RCLONE_CONFIG}")
@@ -45,15 +45,15 @@ async def g_clearme(client, message):
     inline_keyboard = []
     ikeyboard = []
     ikeyboard.append(
-        InlineKeyboardButton("Yes 🚫", callback_data=("fuckingdo").encode("UTF-8"))
+        InlineKeyboardButton("ʏᴇs 🚫", callback_data=("fuckingdo").encode("UTF-8"))
     )
     ikeyboard.append(
-        InlineKeyboardButton("No 🤗", callback_data=("fuckoff").encode("UTF-8"))
+        InlineKeyboardButton("ɴᴏ 🤗", callback_data=("fuckoff").encode("UTF-8"))
     )
     inline_keyboard.append(ikeyboard)
     reply_markup = InlineKeyboardMarkup(inline_keyboard)
     await message.reply_text(
-        "Are you sure? 🚫 This will delete all your downloads locally 🚫",
+        "Aʀᴇ ʏᴏᴜ sᴜʀᴇ? 🚫 ᴛʜɪs ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ᴀʟʟ ʏᴏᴜʀ ᴅᴏᴡɴʟᴏᴀᴅs 🚫",
         reply_markup=reply_markup,
         quote=True,
     )
