@@ -39,7 +39,7 @@ from tobrot.helper_funcs.ytplaylist import yt_playlist_downg
 async def incoming_purge_message_f(client, message):
     """/purge command"""
     print(message.client)
-    i_m_sefg2 = await message.reply_text("Purging...", quote=True)
+    i_m_sefg2 = await message.reply_text("⚙️ᴘᴜʀɢɪɴɢ...", quote=True)
     if await AdminCheck(client, message.chat.id, message.from_user.id):
         aria_i_p = await aria_start()
         # Show All Downloads
@@ -54,7 +54,7 @@ async def incoming_message_f(client, message):
     user_command = message.command[0]
     g_id = message.from_user.id
     # get link from the incoming message
-    i_m_sefg = await message.reply_text("Processing...", quote=True)
+    i_m_sefg = await message.reply_text("💠Pʀᴏᴄᴇssɪɴɢ....", quote=True)
     rep_mess = message.reply_to_message
     is_file = False
     dl_url = ''
@@ -70,7 +70,7 @@ async def incoming_message_f(client, message):
             LOGGER.info(cf_name)
         else:
             if user_command == LEECH_COMMAND.lower():
-                await i_m_sefg.edit("No download source provided 🙄")
+                await i_m_sefg.edit("Nᴏ Dᴏᴡɴʟᴏᴀᴅ Sᴏᴜʀᴄᴇ Pʀᴏᴠɪᴅᴇᴅ😶")
                 return
             is_file = True
             dl_url = rep_mess
@@ -79,7 +79,7 @@ async def incoming_message_f(client, message):
         LOGGER.info(dl_url)
 
     else:
-        await i_m_sefg.edit("<b>Hey Dude !</b>\n\n 🐈 <code>Reply with Direct /Torrent Link</code>")
+        await i_m_sefg.edit("<b>Hᴇʏ Tᴇʟᴇɢᴀʀᴍ Kᴇ Cʜᴏᴍᴅᴇ😒 !</b>\n\n 😂 <code>Tᴏʀʀᴇɴᴛ ʏᴀ ᴘʜɪʀ Dɪʀᴇᴄᴛ ʟɪɴᴋ sᴇ ʀᴇᴘʟʏ ᴋᴀʀ Lᴏᴅᴜ</code>")
         return
     if dl_url is not None:
 
@@ -93,7 +93,7 @@ async def incoming_message_f(client, message):
             os.makedirs(new_download_location)
         aria_i_p = ''
         if not is_file:
-            await i_m_sefg.edit_text("Extracting links...")
+            await i_m_sefg.edit_text("Exᴛʀᴀᴄᴛɪɴɢ Lɪɴᴋs.....")
             # start the aria2c daemon
             aria_i_p = await aria_start()
             # LOGGER.info(aria_i_p)
@@ -135,7 +135,7 @@ async def incoming_message_f(client, message):
             await i_m_sefg.edit_text(err_message)
     else:
         await i_m_sefg.edit_text(
-            f"**FCUK**! wat have you entered. \n<b>API Error</b>: {cf_name}"
+            f"ʙsᴅᴋ ᴋʏᴀ ᴅᴀʟᴀ ʙᴇ😐. \n<b>API Error</b>: {cf_name}"
         )
 
 
@@ -143,7 +143,7 @@ async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
     current_user_id = message.from_user.id
 
-    i_m_sefg = await message.reply_text("<code>Prrocessing...🔃</code>", quote=True)
+    i_m_sefg = await message.reply_text("<code> ⚔️ᴘʀᴏᴄᴇssɪɴɢ...🔃</code>", quote=True)
     # LOGGER.info(message)
     # extract link from message
     if message.reply_to_message:
@@ -160,10 +160,10 @@ async def incoming_youtube_dl_f(client, message):
         yt_dl_pass_word = None
         cf_name = None
     else:
-        await i_m_sefg.edit("<b>🐈 Oops Reply To YTDL Supported Link.</b>")
+        await i_m_sefg.edit("<b>Aʙᴇ Gᴀɴᴅᴜ Yᴛᴅʟ Wᴀʟᴇ Lɪɴᴋ Rᴇᴘʟʏ Kᴀʀ🤣.</b>")
         return
     if dl_url is not None:
-        await i_m_sefg.edit_text("<b>Getting Available Formate</b>...")
+        await i_m_sefg.edit_text("<b>ɢᴇᴛᴛɪɴɢ ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀᴍᴀᴛ</b>...")
         # create an unique directory
         user_working_dir = os.path.join(DOWNLOAD_LOCATION, str(current_user_id))
         # create download directory, if not exist
@@ -190,7 +190,7 @@ async def incoming_youtube_dl_f(client, message):
             await i_m_sefg.edit_text(text=text_message, reply_markup=reply_markup)
     else:
         await i_m_sefg.edit_text(
-            "**FCUK**! wat have you entered.\n"
+            "Bsᴅᴋ Kʏᴀ ᴅᴀʟᴀ ʙᴇ Aᴘɪ ᴇʀʀᴏʀ Hᴏɢᴀʏᴀ😒.\n"
             f"<b>API Error</b>: {cf_name}"
         )
 
@@ -216,13 +216,13 @@ async def g_yt_playlist(client, message):
     if "youtube.com/playlist" in url:
         u_men = message.from_user.mention
         i_m_sefg = await message.reply_text(
-            f"<b>Ok Fine 🐈 {u_men} Bro!!:\n Your Request has been ADDED</b>\n\n <code> Please wait until Upload</code>",
+            f"<b>Bʜᴏsᴅɪᴡᴀʟᴇ {u_men} Cʜᴀᴄᴄʜᴀ!!:\n ʀᴇǫᴜᴇsᴛ ᴀᴅᴅ ʜᴏɢᴀʏᴀ </b>\n\n <code> Uᴘʟᴏᴀᴅ ʜᴏɴᴇ ᴛᴀᴋ ᴍᴜᴛʜ ᴍᴀʀᴏ😂</code>",
             parse_mode="html",
         )
         await yt_playlist_downg(message, i_m_sefg, client, is_cloud)
 
     else:
-        await message.reply_text("<b>YouTube playlist link only 🙄</b>", quote=True)
+        await message.reply_text("<b>Gᴀɴᴅᴜ Yᴏᴜᴛᴜʙᴇ ᴋ ʟɪɴᴋ ᴅᴇ ʙᴇ 🙄</b>", quote=True)
 
  #
 
@@ -248,7 +248,7 @@ async def g_clonee(client, message):
 async def rename_tg_file(client, message):
     usr_id = message.from_user.id
     if not message.reply_to_message:
-        await message.reply("<b>Reply with Telegram Media</b> None", quote=True)
+        await message.reply("<b>Rᴇᴘʟʏ Wɪᴛʜ Tᴇʟᴇɢʀᴀᴍ Mᴇᴅɪᴀ</b> None", quote=True)
         return
     if len(message.command) > 1:
         new_name = (
@@ -286,12 +286,12 @@ async def rename_tg_file(client, message):
                 message_to_send += "\n"
             if message_to_send != "":
                 mention_req_user = (
-                    f"<a href='tg://user?id={usr_id}'>🐈 Hey Bru!! Your Requested Files 👇</a>\n\n"
+                    f"<a href='tg://user?id={usr_id}'> Bsᴅᴋ Yᴇʜ ʟᴇ ᴛᴇʀᴇ ғɪʟᴇs👇</a>\n\n"
                 )
                 message_to_send = mention_req_user + message_to_send
-                message_to_send = message_to_send + "\n\n" + "<b> #UPLOADS\n\n💫 Powered By : @TGFilmZone</b>"
+                message_to_send = message_to_send + "\n\n" + "<b> #UPLOADS\n\n💠ᴘᴏᴡᴇʀᴇᴅ ʙʏ: @FilmZoneX/b>"
             else:
-                message_to_send = "<i>FAILED</i> to upload files. 😞😞"
+                message_to_send = "<i>ғᴀɪʟᴇᴅ</i> ᴛᴏ ᴜᴘʟᴏᴀᴅ ғɪʟᴇs...☹︎"
             await message.reply_text(
                 text=message_to_send, quote=True, disable_web_page_preview=True
             )
@@ -300,5 +300,5 @@ async def rename_tg_file(client, message):
 
     else:
         await message.reply_text(
-            "<b> Oops 😬</b>\n\nProvide Name with extension\n\n➩<b>Example</b>: <code> /rename Avengers Endgame.mkv</code>", quote=True
+            "<b> Bsᴅᴋ 😬</b>\n\nExᴛᴇɴsɪᴏɴ ᴛᴇʀᴀ ʙᴀᴀᴘ ᴅᴇɢᴀ\n\n➩<b>Exᴀᴍᴘʟᴇ</b>: <code> /rename Avengers Endgame.mkv</code>", quote=True
         )
