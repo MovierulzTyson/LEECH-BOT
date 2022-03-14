@@ -45,9 +45,9 @@ please choose which section you want to use:"""
         reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
         await message.reply_text(text=msg_text, reply_markup=reply_markup)
     else:
-        await message.reply_text("You have no permission!")
+        await message.reply_text("ʏᴏᴜ ʜᴀᴠᴇ ɴᴏ ᴘᴇʀᴍɪssɪᴏɴ!")
         LOGGER.warning(
-            f"uid={message.from_user.id} have no permission to edit rclone config!"
+            f"uid={message.from_user.id} ʜᴀᴠᴇ ɴᴏ ᴘᴇʀᴍɪssɪᴏɴ ᴛᴏ ᴇᴅɪᴛ ʀᴄʟᴏɴᴇ ᴄᴏɴғɪɢ!"
         )
 
 
