@@ -40,12 +40,12 @@ from tobrot.UserDynaConfig import UserDynaConfig
 
 async def upload_as_doc(client, message):
     user_specific_config[message.from_user.id]=UserDynaConfig(message.from_user.id,True)
-    await message.reply_text("**🗞 ᴀʙ ғɪʟᴇ ᴅᴏᴄᴜᴍᴇɴᴛ ᴍᴀɪɴ ʜɪ ᴜᴘʟᴏᴀᴅ ʜᴏɢɪ 📁**")
+    await message.reply_text("💠𝗡𝗢𝗪 𝗙𝗜𝗟𝗘 𝗪𝗜𝗟𝗟 𝗕𝗘 𝗨𝗣𝗟𝗢𝗔𝗗𝗘𝗗 𝗔𝗦 𝗗𝗢𝗖𝗨𝗠𝗘𝗡𝗧 𝗙𝗢𝗥𝗠𝗔𝗧💠")
 
 
 async def upload_as_video(client, message):
     user_specific_config[message.from_user.id]=UserDynaConfig(message.from_user.id,False)
-    await message.reply_text("**🗞 Vɪᴅᴇᴏ ғᴏʀᴍᴀᴛ ᴍᴀɪɴ ᴜᴘʟᴏᴀᴅ ʜᴏɢɪ ʙʜᴏsᴅɪᴡᴀʟᴀ ᴄʜᴀᴄʜʜᴀ 🎞**")
+    await message.reply_text("💠𝗡𝗢𝗪 𝗙𝗜𝗟𝗘 𝗪𝗜𝗟𝗟 𝗕𝗘 𝗨𝗣𝗟𝗢𝗔𝗗𝗘𝗗 𝗔𝗦 𝗦𝗧𝗥𝗜𝗠𝗔𝗕𝗟𝗘 𝗙𝗜𝗟𝗘💠")
  
 
 async def status_message_f(
@@ -79,20 +79,20 @@ async def status_message_f(
             if file.status == "active":
                 is_file = file.seeder
                 if is_file is None:
-                    msgg = f"<b>ᴄᴏɴɴ:</b> {file.connections}"
+                    msgg = f"<b>🎭𝘾𝙊𝙉𝙉:</b> {file.connections}"
                 else:
-                    msgg = f"<b>ᴘᴇᴇʀs:</b> {file.connections} | <b>sᴇᴇᴅᴇʀs:</b> {file.num_seeders}"
+                    msgg = f"<b>⚙️𝙋𝙀𝙀𝙍𝙎:</b> {file.connections} | <b>⚙️𝙎𝙀𝙀𝘿𝙀𝙍𝙎:</b> {file.num_seeders}"
 
                 percentage = int(file.progress_string(0).split('%')[0])
                 prog = "[{0}{1}]".format("".join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),"".join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]))
-                msg += f"<b>════════════════════════════════</b>\n"
+                msg += f"<b>════════[ 𝗙𝗜𝗟𝗠 𝗭𝗢𝗡𝗘 𝗫 ]═════════</b>\n"
                 msg += f"\n<b>{downloading_dir_name}</b>"
                 msg += f"\n<b>{prog}</b>"
-                msg += f"\n<b>💠sᴘᴇᴇᴅ💠</b>: {file.download_speed_string()}"
-                msg += f"\n<b>⚔️sᴛᴀᴛᴜs⚔️</b>: {file.progress_string()} <b>of</b> {file.total_length_string()}"
-                msg += f"\n<b>⚙️ᴇᴛᴀ⚙️:</b> {file.eta_string()}"
+                msg += f"\n<b>💠𝙎𝙋𝙀𝙀𝘿💠</b>: {file.download_speed_string()}"
+                msg += f"\n<b>⚔️𝙎𝙏𝘼𝙏𝙐𝙎⚔️</b>: {file.progress_string()} <b>of</b> {file.total_length_string()}"
+                msg += f"\n<b>⚙️𝙀𝙏𝘼⚙️:</b> {file.eta_string()}"
                 msg += f"\n{msgg}"
-                msg += f"\n<b>🚫Tᴏ ᴄᴀɴᴄᴇʟ:</b> <code>/cancel {file.gid}</code>"
+                msg += f"\n<b>🚫𝙏𝙊 𝘾𝘼𝙉𝘾𝙀𝙇:</b> <code>/cancel {file.gid}</code>"
                 msg += "\n"
 
         hr, mi, se = up_time(time.time() - BOT_START_TIME)
@@ -104,12 +104,12 @@ async def status_message_f(
         free = humanbytes(free)
 
         ms_g = (
-            f"<b>⚠︎ᴜᴘᴛɪᴍᴇ</b>: <code>{hr} : {mi} : {se}</code>\n"
-            f"<b>🔗T:</b> <code>{total}</code> <b>U:</b> <code>{used}</code> <b>🔗F:</b> <code>{free}</code>\n"
-            f"<b>ʀᴀᴍ💠:</b> <code>{ram}%</code> <b>ᴄᴘᴜ⚙️:</b> <code>{cpu}%</code>\n"
+            f"<b>⚠︎𝙐𝙋𝙏𝙄𝙈𝙀</b>: <code>{hr} : {mi} : {se}</code>\n"
+            f"<b>🔗𝙏:</b> <code>{total}</code> <b>𝙐:</b> <code>{used}</code> <b>🔗𝙁:</b> <code>{free}</code>\n"
+            f"<b>𝙍𝘼𝙈💠:</b> <code>{ram}%</code> <b>𝘾𝙋𝙐⚙️:</b> <code>{cpu}%</code>\n"
         )
         if msg == "":
-            msg = "ᴋᴜᴄʜ ɴʜɪ ʜᴏʀᴀʜᴀ ᴀʙ ᴛᴏʜ🧲 ᴄʜɪʟʟ ᴍᴀʀ ʀᴀʜᴀ ʜᴜ"
+            msg = "𝙉𝙊 𝙋𝙍𝙊𝘾𝙀𝙎𝙎 𝙍𝙐𝙉 𝙔𝙀𝙏 ✌︎"
             msg = ms_g + "\n" + msg
             await to_edit.edit(msg)
             break
@@ -205,7 +205,7 @@ async def exec_message_f(client, message):
 
 
 async def upload_document_f(client, message):
-    imsegd = await message.reply_text("ᴘʀᴏᴄᴇssɪɴɢ ...")
+    imsegd = await message.reply_text("𝙋𝙍𝙊𝘾𝙀𝙎𝙎𝙄𝙉𝙂 ...")
     if message.from_user.id in AUTH_CHANNEL:
         if " " in message.text:
             recvd_command, local_file_name = message.text.split(" ", 1)
@@ -218,7 +218,7 @@ async def upload_document_f(client, message):
 
 async def eval_message_f(client, message):
     if message.from_user.id in AUTH_CHANNEL:
-        status_message = await message.reply_text("ᴘʀᴏᴄᴇssɪɴɢ ...")
+        status_message = await message.reply_text("𝙋𝙍𝙊𝘾𝙀𝙎𝙎𝙄𝙉𝙂 ...")
         cmd = message.text.split(" ", maxsplit=1)[1]
 
         reply_to_id = message.message_id
