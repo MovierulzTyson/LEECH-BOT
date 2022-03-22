@@ -51,7 +51,7 @@ class Progress:
             [
                 [
                     InlineKeyboardButton(
-                        "🚫ᴄᴀɴᴄᴇʟ🚫",
+                        "🚫𝘾𝘼𝙉𝘾𝙀𝙇🚫",
                         callback_data=(
                             f"gUPcancel/{chat_id}/{mes_id}/{from_user}"
                         ).encode("UTF-8"),
@@ -82,7 +82,7 @@ class Progress:
                 ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]),
                 round(percentage, 2))
             #cpu = "{psutil.cpu_percent()}%"
-            tmp = progress + "\n**• ᴛᴏᴛᴀʟ 📀:**`〘{1}〙`\n**• ᴅᴏɴᴇ ✓ :**` 〘{0}〙`\n**• sᴘᴇᴇᴅ 🚀 :** `〘{2}〙`\n**• ᴇᴛᴀ ⏳ :**` 〘{3}〙`".format(
+            tmp = progress + "\n**• 𝙏𝙊𝙏𝘼𝙇 📀:**`〘{1}〙`\n**• 𝘿𝙊𝙉𝙀 ✓ :**` 〘{0}〙`\n**• 𝙎𝙋𝙀𝙀𝘿 🚀 :** `〘{2}〙`\n**• 𝙀𝙏𝘼 ⏳ :**` 〘{3}〙`".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),
