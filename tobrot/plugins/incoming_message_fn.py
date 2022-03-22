@@ -39,7 +39,7 @@ from tobrot.helper_funcs.ytplaylist import yt_playlist_downg
 async def incoming_purge_message_f(client, message):
     """/purge command"""
     print(message.client)
-    i_m_sefg2 = await message.reply_text("⚙️ᴘᴜʀɢɪɴɢ...", quote=True)
+    i_m_sefg2 = await message.reply_text("⚙️𝙋𝙐𝙍𝙂𝙄𝙉𝙂...", quote=True)
     if await AdminCheck(client, message.chat.id, message.from_user.id):
         aria_i_p = await aria_start()
         # Show All Downloads
@@ -54,7 +54,7 @@ async def incoming_message_f(client, message):
     user_command = message.command[0]
     g_id = message.from_user.id
     # get link from the incoming message
-    i_m_sefg = await message.reply_text("💠Pʀᴏᴄᴇssɪɴɢ....", quote=True)
+    i_m_sefg = await message.reply_text("💠𝙋𝙍𝙊𝘾𝙀𝙎𝙎𝙄𝙉𝙂....", quote=True)
     rep_mess = message.reply_to_message
     is_file = False
     dl_url = ''
@@ -79,7 +79,7 @@ async def incoming_message_f(client, message):
         LOGGER.info(dl_url)
 
     else:
-        await i_m_sefg.edit("<b>Hᴇʏ Tᴇʟᴇɢᴀʀᴍ Kᴇ Cʜᴏᴍᴅᴇ😒 !</b>\n\n 😂 <code>Tᴏʀʀᴇɴᴛ ʏᴀ ᴘʜɪʀ Dɪʀᴇᴄᴛ ʟɪɴᴋ sᴇ ʀᴇᴘʟʏ ᴋᴀʀ Lᴏᴅᴜ</code>")
+        await i_m_sefg.edit("<b>𝙃𝙀𝙔!</b>\n\n 🎭 <code>𝙍𝙀𝙋𝙇𝙔 𝙒𝙄𝙏𝙃 𝘼𝙉𝙔 𝙏𝙊𝙍𝙍𝙀𝙉𝙏/𝙈𝘼𝙂𝙉𝙀𝙏/𝘿𝙄𝙍𝙀𝘾𝙏 𝙇𝙄𝙉𝙆💠</code>")
         return
     if dl_url is not None:
 
@@ -135,7 +135,7 @@ async def incoming_message_f(client, message):
             await i_m_sefg.edit_text(err_message)
     else:
         await i_m_sefg.edit_text(
-            f"ʙsᴅᴋ ᴋʏᴀ ᴅᴀʟᴀ ʙᴇ😐. \n<b>API Error</b>: {cf_name}"
+            f"𝙁𝙐𝘾𝙆! 𝘼𝙋𝙄 𝙀𝙍𝙍𝙊𝙍😶. \n<b>API Error</b>: {cf_name}"
         )
 
 
@@ -160,10 +160,10 @@ async def incoming_youtube_dl_f(client, message):
         yt_dl_pass_word = None
         cf_name = None
     else:
-        await i_m_sefg.edit("<b>Aʙᴇ Gᴀɴᴅᴜ Yᴛᴅʟ Wᴀʟᴇ Lɪɴᴋ Rᴇᴘʟʏ Kᴀʀ🤣.</b>")
+        await i_m_sefg.edit("<b>𝙍𝙀𝙋𝙇𝙔 𝙒𝙄𝙏𝙃 𝘼𝙉𝙔 𝙔𝙏𝘿𝙇 𝙇𝙄𝙉𝙆 ✌︎.</b>")
         return
     if dl_url is not None:
-        await i_m_sefg.edit_text("<b>ɢᴇᴛᴛɪɴɢ ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀᴍᴀᴛ</b>...")
+        await i_m_sefg.edit_text("<b>𝙂𝙀𝙏𝙏𝙄𝙉𝙂 𝘼𝙑𝘼𝙄𝙇𝘼𝘽𝙇𝙀 𝙁𝙊𝙍𝙈𝘼𝙏</b>...")
         # create an unique directory
         user_working_dir = os.path.join(DOWNLOAD_LOCATION, str(current_user_id))
         # create download directory, if not exist
@@ -190,7 +190,7 @@ async def incoming_youtube_dl_f(client, message):
             await i_m_sefg.edit_text(text=text_message, reply_markup=reply_markup)
     else:
         await i_m_sefg.edit_text(
-            "Bsᴅᴋ Kʏᴀ ᴅᴀʟᴀ ʙᴇ Aᴘɪ ᴇʀʀᴏʀ Hᴏɢᴀʏᴀ😒.\n"
+            "𝙁𝙐𝘾𝙆! 𝘼𝙋𝙄 𝙀𝙍𝙍𝙊𝙍.\n"
             f"<b>API Error</b>: {cf_name}"
         )
 
@@ -216,13 +216,13 @@ async def g_yt_playlist(client, message):
     if "youtube.com/playlist" in url:
         u_men = message.from_user.mention
         i_m_sefg = await message.reply_text(
-            f"<b>Bʜᴏsᴅɪᴡᴀʟᴇ {u_men} Cʜᴀᴄᴄʜᴀ!!:\n ʀᴇǫᴜᴇsᴛ ᴀᴅᴅ ʜᴏɢᴀʏᴀ </b>\n\n <code> Uᴘʟᴏᴀᴅ ʜᴏɴᴇ ᴛᴀᴋ ᴍᴜᴛʜ ᴍᴀʀᴏ😂</code>",
+            f"<b>𝙃𝙀𝙔 {u_men} 𝘽𝙐𝘿𝘿𝙔 :\n 𝙍𝙀𝙌𝙐𝙀𝙎𝙏 𝘼𝘿𝘿𝙀𝘿🎀 </b>\n\n <code> 𝙒𝘼𝙄𝙏 𝙎𝙊𝙈𝙀 𝙏𝙄𝙈𝙀 𝙄 𝙒𝙄𝙇𝙇 𝙐𝙋𝙇𝙊𝘼𝘿 𝙎𝙊𝙊𝙉🛡️</code>",
             parse_mode="html",
         )
         await yt_playlist_downg(message, i_m_sefg, client, is_cloud)
 
     else:
-        await message.reply_text("<b>Gᴀɴᴅᴜ Yᴏᴜᴛᴜʙᴇ ᴋ ʟɪɴᴋ ᴅᴇ ʙᴇ 🙄</b>", quote=True)
+        await message.reply_text("<b>𝙂𝙄𝙑𝙀 𝙔𝙏𝘿𝙇 𝙇𝙄𝙉𝙆 🙄</b>", quote=True)
 
  #
 
@@ -248,7 +248,7 @@ async def g_clonee(client, message):
 async def rename_tg_file(client, message):
     usr_id = message.from_user.id
     if not message.reply_to_message:
-        await message.reply("<b>Rᴇᴘʟʏ Wɪᴛʜ Tᴇʟᴇɢʀᴀᴍ Mᴇᴅɪᴀ</b> None", quote=True)
+        await message.reply("<b> 𝙍𝙀𝙋𝙇𝙔 𝙒𝙄𝙏𝙃 𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙈 𝙈𝙀𝘿𝙄𝘼 🥂</b> None", quote=True)
         return
     if len(message.command) > 1:
         new_name = (
@@ -278,7 +278,7 @@ async def rename_tg_file(client, message):
                 message_id = final_response[key_f_res_se]
                 channel_id = str(message.chat.id)[4:]
                 private_link = f"https://t.me/c/{channel_id}/{message_id}"
-                message_to_send += "➪ <a href='"
+                message_to_send += "📤 <a href='"
                 message_to_send += private_link
                 message_to_send += "'>"
                 message_to_send += local_file_name
@@ -286,12 +286,12 @@ async def rename_tg_file(client, message):
                 message_to_send += "\n"
             if message_to_send != "":
                 mention_req_user = (
-                    f"<a href='tg://user?id={usr_id}'> Bsᴅᴋ Yᴇʜ ʟᴇ ᴛᴇʀᴇ ғɪʟᴇs👇</a>\n\n"
+                    f"<a href='tg://user?id={usr_id}'> 𝙃𝙀𝙔 𝘽𝙐𝘿𝘿𝙔 𝙔𝙊𝙐𝙍 𝙁𝙄𝙇𝙀𝙎👇</a>\n\n"
                 )
                 message_to_send = mention_req_user + message_to_send
-                message_to_send = message_to_send + "\n\n" + "<b> #UPLOADS\n\n💠ᴘᴏᴡᴇʀᴇᴅ ʙʏ: @FilmZoneX/b>"
+                message_to_send = message_to_send + "\n\n" + "<b> #UPLOADS\n\n💠𝙋𝙊𝙒𝙀𝙍𝙀𝘿 𝘽𝙔: @FilmZoneX </b>"
             else:
-                message_to_send = "<i>ғᴀɪʟᴇᴅ</i> ᴛᴏ ᴜᴘʟᴏᴀᴅ ғɪʟᴇs...☹︎"
+                message_to_send = "<i>𝙁𝘼𝙄𝙇𝙀𝘿</i> 𝙏𝙊 𝙐𝙋𝙇𝙊𝘼𝘿 𝙁𝙄𝙇𝙀𝙎...☹︎"
             await message.reply_text(
                 text=message_to_send, quote=True, disable_web_page_preview=True
             )
@@ -300,5 +300,5 @@ async def rename_tg_file(client, message):
 
     else:
         await message.reply_text(
-            "<b> Bsᴅᴋ 😬</b>\n\nExᴛᴇɴsɪᴏɴ ᴛᴇʀᴀ ʙᴀᴀᴘ ᴅᴇɢᴀ\n\n➩<b>Exᴀᴍᴘʟᴇ</b>: <code> /rename Avengers Endgame.mkv</code>", quote=True
+            "<b> 𝙃𝙀𝙔</b>\n\n𝙂𝙄𝙑𝙀 𝙀𝙓𝙏𝙀𝙉𝙎𝙄𝙊𝙉\n\n➩<b>𝙀𝙓𝘼𝙈𝙋𝙇𝙀</b>: <code> /rename Avengers Endgame.mkv</code>", quote=True
         )
