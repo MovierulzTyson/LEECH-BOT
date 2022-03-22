@@ -47,7 +47,7 @@ async def down_load_media_f(client, message):  # to be removed
 async def download_tg(client, message):
     user_id = message.from_user.id
     LOGGER.info(user_id)
-    mess_age = await message.reply_text("**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...**", quote=True)
+    mess_age = await message.reply_text("**𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙄𝙉𝙂...**", quote=True)
     if not os.path.isdir(DOWNLOAD_LOCATION):
         os.makedirs(DOWNLOAD_LOCATION)
     rep_mess = message.reply_to_message
@@ -63,7 +63,7 @@ async def download_tg(client, message):
                 message=message.reply_to_message,
                 file_name=download_location,
                 progress=prog.progress_for_pyrogram,
-                progress_args=(f"**• ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ :** `{file_name}`", c_time)
+                progress_args=(f"**• 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙄𝙉𝙂 :** `{file_name}`", c_time)
             )
         except Exception as g_e:
             await mess_age.edit(str(g_e))
@@ -78,6 +78,6 @@ async def download_tg(client, message):
                 f"Downloaded to <code>{the_real_download_location}</code> in <u>{ms}</u> seconds"
             )
         else:
-            await mess_age.edit_text("😔 ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴀɴᴄᴇʟʟᴇʀ ᴏʀ sᴏᴍᴇ ᴇʀʀᴏʀ ʜᴀᴘᴘᴇɴᴇᴅ")
+            await mess_age.edit_text("😔 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿 𝘾𝘼𝙉𝘾𝙀𝙇𝙇𝙀𝘿 𝙊𝙍 𝙎𝙊𝙈𝙀 𝙀𝙍𝙍𝙊𝙍 𝙃𝘼𝙋𝙋𝙀𝙉")
             return None, mess_age
     return the_real_download_location, mess_age
