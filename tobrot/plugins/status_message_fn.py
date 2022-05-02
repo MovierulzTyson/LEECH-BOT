@@ -40,12 +40,12 @@ from tobrot.UserDynaConfig import UserDynaConfig
 
 async def upload_as_doc(client, message):
     user_specific_config[message.from_user.id]=UserDynaConfig(message.from_user.id,True)
-    await message.reply_text("💠𝗡𝗢𝗪 𝗙𝗜𝗟𝗘 𝗪𝗜𝗟𝗟 𝗕𝗘 𝗨𝗣𝗟𝗢𝗔𝗗𝗘𝗗 𝗔𝗦 𝗗𝗢𝗖𝗨𝗠𝗘𝗡𝗧 𝗙𝗢𝗥𝗠𝗔𝗧💠")
+    await message.reply_text("💠𝗡𝗢𝗪 𝗙𝗜𝗟𝗘 𝗪𝗜𝗟𝗟 𝗕𝗘 𝗨𝗣𝗟𝗢𝗔𝗗𝗘𝗗 𝗔𝗦 𝗗𝗢𝗖𝗨𝗠𝗘𝗡𝗧 💠")
 
 
 async def upload_as_video(client, message):
     user_specific_config[message.from_user.id]=UserDynaConfig(message.from_user.id,False)
-    await message.reply_text("💠𝗡𝗢𝗪 𝗙𝗜𝗟𝗘 𝗪𝗜𝗟𝗟 𝗕𝗘 𝗨𝗣𝗟𝗢𝗔𝗗𝗘𝗗 𝗔𝗦 𝗦𝗧𝗥𝗜𝗠𝗔𝗕𝗟𝗘 𝗙𝗜𝗟𝗘💠")
+    await message.reply_text("💠𝗡𝗢𝗪 𝗙𝗜𝗟𝗘 𝗪𝗜𝗟𝗟 𝗕𝗘 𝗨𝗣𝗟𝗢𝗔𝗗𝗘𝗗 𝗔𝗦 𝗦𝗧𝗥𝗘𝗔𝗠𝗔𝗕𝗟𝗘 💠")
  
 
 async def status_message_f(
@@ -85,7 +85,7 @@ async def status_message_f(
 
                 percentage = int(file.progress_string(0).split('%')[0])
                 prog = "[{0}{1}]".format("".join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),"".join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]))
-                msg += f"<b>═════[ 𝗙𝗜𝗟𝗠 𝗭𝗢𝗡𝗘 𝗫 ]══════</b>\n"
+                msg += f"<b>═════[ 𝐁𝐑𝐔𝐂𝐄 𝐁𝐎𝐓𝐒 ]══════</b>\n"
                 msg += f"\n<b>{downloading_dir_name}</b>"
                 msg += f"\n<b>{prog}</b>"
                 msg += f"\n<b>💠𝙎𝙋𝙀𝙀𝘿💠</b>: {file.download_speed_string()}"
