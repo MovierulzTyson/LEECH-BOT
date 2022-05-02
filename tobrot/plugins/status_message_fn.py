@@ -86,8 +86,8 @@ async def status_message_f(
                 percentage = int(file.progress_string(0).split('%')[0])
                 prog = "[{0}{1}]".format("".join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),"".join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]))
                 msg += f"<b>═════[ 𝐁𝐑𝐔𝐂𝐄 𝐁𝐎𝐓𝐒 ]══════</b>\n"
-                msg += f"\n<b>{downloading_dir_name}</b>"
-                msg += f"\n<b>{prog}</b>"
+                msg += f"\n<b>🌀𝗡𝗔𝗠𝗘🌀</b>: {downloading_dir_name}</b>"
+                msg += f"\n<b>♻️𝗣𝗥𝗢𝗚𝗥𝗘𝗦𝗦♻️</b>: {prog}</b>"
                 msg += f"\n<b>💠𝙎𝙋𝙀𝙀𝘿💠</b>: {file.download_speed_string()}"
                 msg += f"\n<b>⚔️𝙎𝙏𝘼𝙏𝙐𝙎⚔️</b>: {file.progress_string()} <b>of</b> {file.total_length_string()}"
                 msg += f"\n<b>⚙️𝙀𝙏𝘼⚙️:</b> {file.eta_string()}"
